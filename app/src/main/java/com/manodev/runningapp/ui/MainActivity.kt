@@ -1,10 +1,11 @@
-package com.manodev.runningapp
+package com.manodev.runningapp.ui
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.manodev.runningapp.R
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
