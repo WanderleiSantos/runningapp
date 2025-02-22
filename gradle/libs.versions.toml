@@ -1,11 +1,9 @@
 [versions]
-agp = "8.8.0"
-dagger = "2.53"
-daggerAndroid = "2.28.1"
-daggerAndroidProcessor = "2.23.2"
+agp = "8.8.1"
+compiler = "4.11.0"
 easypermissions = "3.0.0"
 glide = "4.16.0"
-kotlin = "2.1.10"
+kotlin = "2.0.0"
 coreKtx = "1.15.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
@@ -17,12 +15,17 @@ lifecycleViewmodelKtxVersion = "2.8.7"
 material = "1.12.0"
 activity = "1.10.0"
 constraintlayout = "2.2.0"
-mpandroidchart = "v3.1.0"
 navigationFragmentKtx = "2.8.6"
 playServicesLocation = "21.3.0"
 playServicesMaps = "19.0.0"
 roomRuntime = "2.6.1"
 timber = "4.7.1"
+
+ksp = "2.0.21-1.0.27"
+
+hiltAndroid = "2.53"
+hiltCompiler = "2.51.1"
+hiltCompilerVersion = "1.2.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -33,11 +36,7 @@ androidx-navigation-ui-ktx = { module = "androidx.navigation:navigation-ui-ktx",
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomRuntime" }
 androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "roomRuntime" }
 androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomRuntime" }
-dagger = { module = "com.google.dagger:dagger", version.ref = "dagger" }
-dagger-android = { module = "com.google.dagger:dagger-android", version.ref = "daggerAndroid" }
-dagger-android-processor = { module = "com.google.dagger:dagger-android-processor", version.ref = "daggerAndroidProcessor" }
-dagger-android-support = { module = "com.google.dagger:dagger-android-support", version.ref = "daggerAndroid" }
-dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = "dagger" }
+compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "compiler" }
 easypermissions = { module = "pub.devrel:easypermissions", version.ref = "easypermissions" }
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -49,12 +48,18 @@ kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-c
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
-mpandroidchart = { module = "com.github.PhilJay:MPAndroidChart", version.ref = "mpandroidchart" }
 play-services-location = { module = "com.google.android.gms:play-services-location", version.ref = "playServicesLocation" }
 play-services-maps = { module = "com.google.android.gms:play-services-maps", version.ref = "playServicesMaps" }
 timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
 
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
+hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hiltCompiler" }
+androidx-hilt-compiler = { module = "androidx.hilt:hilt-compiler", version.ref = "hiltCompilerVersion" }
+androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltCompilerVersion" }
+ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 

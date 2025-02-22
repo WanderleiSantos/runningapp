@@ -1,7 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    id("kotlin-kapt")
+    alias(libs.plugins.ksp)
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -51,7 +52,7 @@ dependencies {
 
     // Room
     implementation(libs.androidx.room.runtime)
-    kapt(libs.androidx.room.compiler)
+    ksp(libs.androidx.room.compiler)
 
     // Kotlin Extensions and Coroutines support for Room
     implementation(libs.androidx.room.ktx)
@@ -69,20 +70,17 @@ dependencies {
 
     // Glide
     implementation(libs.glide)
-    kapt("com.github.bumptech.glide:compiler:4.11.0")
+    ksp(libs.compiler)
 
     // Google Maps Location Services
     implementation(libs.play.services.location)
     implementation(libs.play.services.maps)
 
-    // Dagger Core
-    implementation(libs.dagger)
-    kapt(libs.dagger.compiler)
-
-    // Dagger Android
-    api(libs.dagger.android)
-    api(libs.dagger.android.support)
-    kapt(libs.dagger.android.processor)
+    // Dagger - Hilt
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.compiler)
+    ksp(libs.androidx.hilt.compiler)
+    implementation(libs.androidx.hilt.navigation.compose)
 
     // Easy Permissions
     implementation(libs.easypermissions)
